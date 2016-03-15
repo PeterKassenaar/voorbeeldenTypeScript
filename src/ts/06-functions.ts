@@ -33,8 +33,10 @@ console.log(add8(70, 80));
 var addLambdaSimple = function (x:number, y:number):number {
 	return x + y;
 };
-addLambdaSimple(10, 20);
+console.log(addLambdaSimple(10, 20));
 
 // 6. Even simpler, by using the => syntax and no more 'function'
-var addLambdaSimpler = (x:number, y:number) => x + y;
-addLambdaSimpler(30, 20);
+var addLambdaSimpler = (x:number, y:number) => {
+	return x + y;
+};
+console.log(addLambdaSimpler(30, 20));

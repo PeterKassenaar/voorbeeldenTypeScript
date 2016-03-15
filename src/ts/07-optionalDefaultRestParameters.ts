@@ -18,13 +18,16 @@
 		displayAddress(restOfAddress + ', ' + city);
 	}
 
+	buildAddressRest('Etten-Leur', 'Trivium', 'Trivium 76', 'Breda', 'Tilburg')
+
 	function displayAddress(msg:string) {
-		result.innerHTML = msg;
+		document.getElementById('result').innerHTML = msg;
 	}
 
 	// Quick & Dirty jQUery imitation...
 	var $ = (id) => document.getElementById(id);
 
+	// <> betekent Casting, oftewel 'omzetten'
 	var addressButton:HTMLButtonElement = <HTMLButtonElement>$('addressButton'),
 		address:HTMLInputElement        = <HTMLInputElement>$('address'),
 		address2:HTMLInputElement       = <HTMLInputElement>$('address2'),
@@ -32,7 +35,8 @@
 		result                          = $('result');
 
 	//Call function with optional parameter
-	addressButton.addEventListener('click',(e) => buildAddressOptional(address.value, city.value));
+	addressButton.addEventListener('click',
+		(e) => buildAddressOptional(address.value, city.value));
 
 	//Call function with default parameter
 	//addressButton.addEventListener('click', (e) => buildAddressDefault(address.value, city.value));
