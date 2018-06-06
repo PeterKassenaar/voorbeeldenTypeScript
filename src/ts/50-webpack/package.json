@@ -1,0 +1,17 @@
+{
+	"name": "50-webpack",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch": "tsc -w",
+		"webpack": "webpack"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"typescript": "^2.9.1",
+		"webpack": "^4.11.1"
+	}
+}
