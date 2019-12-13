@@ -6,14 +6,14 @@ namespace thisPrimer {
   // Invoking of the 'this' keyword depends on *who* is invoking
   //1.  Via  function
   function myFunction() {
-    console.log('Function :::', this);
+    console.log('Function, "this" points at :::', this);
   }
   myFunction(); // The window is invoking the function, so this points to Window object.
 
   // 2. Via Object
   //   const myObj = {
   //     myMethod() {
-  //       console.log('Object:::', this);
+  //       console.log('Object, "this" points at :::', this);
   //     }
   //   };
   //   myObj.myMethod(); // The object myObj is invoking the function, so 'this' points to the object
@@ -22,10 +22,10 @@ namespace thisPrimer {
   //   class MyClass {
   //     name: string = 'Peter';
   //     myMethod() {
-  //       console.log('Class:::', this);
+  //       console.log('Class, "this" points at :::', this);
   //     }
   //   }
-
+  //
   //   const myClass = new MyClass();
   //   myClass.myMethod(); // The class is invoking the function, so 'this' points to the class.
 
@@ -39,11 +39,11 @@ namespace thisPrimer {
   // const handleClick = function(this: HTMLAnchorElement, e: Event) {
   // 	e.preventDefault();
   // 	console.log(this); // <a href="...">...</a>
-  // 	// console.log(
-  // 	// 	'href and classes of this link:::',
-  // 	// 	this.href,
-  // 	// 	this.className
-  // 	// );
+  // 	console.log(
+  // 		'href and classes of this link:::',
+  // 		this.href,
+  // 		this.className
+  // 	);
   // };
   // elem.addEventListener('click', handleClick, false);
 }
