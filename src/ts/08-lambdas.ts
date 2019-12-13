@@ -1,4 +1,4 @@
-﻿var Timer = function() {
+﻿const Timer = function () {
     this.start = document.getElementById('startButton');
     this.stop = document.getElementById('stopButton');
     this.timer = document.getElementById('timer');

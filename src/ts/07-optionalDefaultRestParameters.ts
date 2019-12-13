@@ -24,15 +24,15 @@
 		document.getElementById('result').innerHTML = msg;
 	}
 
-	// Quick & Dirty jQUery imitation...
-	var $ = (id) => document.getElementById(id);
+	// Quick & Dirty jQuery imitation...
+	const $ = id => document.getElementById(id);
 
 	// <> betekent Casting, oftewel 'omzetten'
-	var addressButton:HTMLButtonElement = <HTMLButtonElement>$('addressButton'),
-		address:HTMLInputElement        = <HTMLInputElement>$('address'),
-		address2:HTMLInputElement       = <HTMLInputElement>$('address2'),
-		city:HTMLInputElement           = <HTMLInputElement>$('city'),
-		result                          = $('result');
+	const addressButton: HTMLButtonElement = <HTMLButtonElement>$('addressButton'),
+		address: HTMLInputElement = <HTMLInputElement>$('address'),
+		address2: HTMLInputElement = <HTMLInputElement>$('address2'),
+		city: HTMLInputElement = <HTMLInputElement>$('city'),
+		result = $('result');
 
 	//Call function with optional parameter
 	addressButton.addEventListener('click',

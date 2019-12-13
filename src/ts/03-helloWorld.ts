@@ -11,6 +11,6 @@ class HelloWorld {
 }
 
 window.onload=function() {
-	var hello = new HelloWorld('Hello World');
+	const hello = new HelloWorld('Hello World');
 	console.log(hello.sayHello());
 };

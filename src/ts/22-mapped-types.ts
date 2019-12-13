@@ -13,7 +13,7 @@ namespace mapped_types {
 	/*************************** */
 
 	// 1a. Create an interface
-	interface Employee {
+	export interface Employee {
 		name: string;
 		age: number;
 	}
@@ -21,7 +21,7 @@ namespace mapped_types {
 	// Somewhere else in our application, we might want to have
 	// a readonly version of this interface. So? Create another
 	// interface, right?
-	interface ReadonlyEmployee {
+	interface ReadonlyEmployee  {
 		readonly name: string;
 		readonly age: number;
 	}
@@ -111,6 +111,6 @@ namespace mapped_types {
 	/*************************** */
 	// 3. Required Mapped Type
     /*************************** */
-    
+
 	// 3a. This is actually the opposite of the Partial. All properties are required!
 }
