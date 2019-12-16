@@ -4,7 +4,7 @@
 
 interface IGreet {
     greet(msg: IMessage): void;
-}   
+}
 
 
 class Greeter implements IGreet {
@@ -16,11 +16,11 @@ class Greeter implements IGreet {
 
     greet(msg: IMessage) {
         this.element.innerHTML = msg.greeting;
-    }      
+    }
 }
 
 window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
+    const el = document.getElementById('content');
+    const greeter = new Greeter(el);
     greeter.greet({ greeting: 'Hello from the Greeter Class!' });
 };

@@ -1,24 +1,24 @@
 class GreeterBaseClass {
-	private _msg:string;
+    private _msg: string;
 
-	constructor(msg:string) {
-		this._msg = msg;
-	}
+    constructor(msg: string) {
+        this._msg = msg;
+    }
 
-	getMsg() {
-		return this._msg;
-	}
+    getMsg() {
+        return this._msg;
+    }
 }
 
 class GreeterExtendedClass extends GreeterBaseClass {
-	constructor(msg:string) {
-		super(msg)
-	}
+    constructor(msg: string) {
+        super(msg)
+    }
 
-	greet() {
-		return super.getMsg();
-	}
+    greet() {
+        return super.getMsg();
+    }
 }
 
-var greeterExtended                         = new GreeterExtendedClass('Hello Breda');
+const greeterExtended = new GreeterExtendedClass('Hello Breda');
 document.getElementById('result').innerHTML = greeterExtended.greet();

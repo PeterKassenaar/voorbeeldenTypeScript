@@ -32,7 +32,7 @@ class InterfacePerson implements IPerson {
 }
 
 // optie 1:
-var interfacePerson = new InterfacePerson('Peter', 'Kassenaar', 'info@kassenaar.com');
+const interfacePerson = new InterfacePerson('Peter', 'Kassenaar', 'info@kassenaar.com');
 //Optie 2:
 // var interfacePerson = new InterfacePerson({firstName: 'Peter', lastName: 'Kassenaar', email: 'info@kassenaar.com'});
 console.log(interfacePerson);

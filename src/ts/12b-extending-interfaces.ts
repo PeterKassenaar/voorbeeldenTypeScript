@@ -72,14 +72,14 @@ module Interfaces {
         }
 
         calculateTotal(): number {
-            var taxRate = .08;
+            const taxRate = .08;
             return this.basePrice + (taxRate * this.basePrice);
         }
 
         addAccessories(...accessories: Accessory[]) {
             this.accessoryList = '';
-            for (var i = 0; i < accessories.length; i++) {
-                var ac = accessories[i];
+            for (let i = 0; i < accessories.length; i++) {
+                const ac = accessories[i];
                 this.accessoryList += ac.accessoryNumber + ' ' + ac.title + '<br />';
             }
         }
@@ -117,11 +117,10 @@ module Interfaces {
             this.fourByFour = options.fourByFour;
         }
     }
-
 }
 
 window.onload = function () {
-    var truck = new Interfaces.Truck({
+    const truck = new Interfaces.Truck({
         engine: new Interfaces.Engine(250, 'V6'),
         basePrice: 45000,
         state: 'Arizona',
@@ -131,7 +130,5 @@ window.onload = function () {
         bedLength: 'Short bed',
         fourByFour: true
     });
-
     alert(truck.bedLength);
-
 };

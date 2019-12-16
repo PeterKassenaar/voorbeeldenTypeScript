@@ -23,7 +23,7 @@ class InterfacePersonFn implements IPersonFn {
 	}
 }
 
-var interfacePersonFn = new InterfacePersonFn('Peter', 'Kassenaar', 'info@kassenaar.com');
+const interfacePersonFn = new InterfacePersonFn('Peter', 'Kassenaar', 'info@kassenaar.com');
 console.log(interfacePersonFn);
 document.getElementById('result').innerHTML = interfacePersonFn.greet();
 document.getElementById('result').innerHTML += '<hr />Full name: ' + interfacePersonFn.fullName();
