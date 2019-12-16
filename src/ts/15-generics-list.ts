@@ -1,5 +1,5 @@
 ﻿class List<T> {
-	_items: T[] = [];
+	private _items: T[] = [];
 
 	add(item: T) {
 		this._items.push(item);
@@ -10,7 +10,7 @@
 	}
 }
 
-var nameList = new List<string>();
+const nameList = new List<string>();
 
 nameList.add('Peter');
 nameList.add('Sandra');
@@ -19,7 +19,7 @@ nameList.add('Feline');
 // nameList.add(42); // error
 console.log('nameList: ', nameList);
 
-var numList = new List<number>();
+const numList = new List<number>();
 numList.add(1);
 numList.add(2);
 numList.add(3);
