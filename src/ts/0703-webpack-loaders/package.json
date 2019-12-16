@@ -1,0 +1,20 @@
+{
+  "name": "0703-webpack-loaders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "typescript": "^2.1.6"
+  },
+  "devDependencies": {
+    "ts-loader": "^2.0.1"
+  }
+}
