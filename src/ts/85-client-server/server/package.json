@@ -1,0 +1,19 @@
+{
+  "name": "0705-typescript-nodejs-server",
+  "version": "1.0.0",
+  "author": "Peter Kassenaar",
+  "scripts": {
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "typescript": "^2.2.1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "0.0.34",
+    "@types/express": "^4.0.35"
+  }
+}

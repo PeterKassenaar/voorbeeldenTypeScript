@@ -6,29 +6,43 @@ namespace thisPrimer {
   // Invoking of the 'this' keyword depends on *who* is invoking
   //1.  Via  function
   function myFunction() {
+    var title='Hello';
     console.log('Function, "this" points at :::', this);
+    this.title;
   }
   myFunction(); // The window is invoking the function, so this points to Window object.
 
   // 2. Via Object
-  //   const myObj = {
-  //     myMethod() {
-  //       console.log('Object, "this" points at :::', this);
-  //     }
-  //   };
-  //   myObj.myMethod(); // The object myObj is invoking the function, so 'this' points to the object
+    const myObj = {
+      myMethod() {
+        console.log('Object, "this" points at :::', this);
+      }
+    };
+    myObj.myMethod(); // The object myObj is invoking the function, so 'this' points to the object
 
   // 3. Via class
-  //   class MyClass {
-  //     name: string = 'Peter';
-  //     myMethod() {
-  //       console.log('Class, "this" points at :::', this);
-  //     }
-  //   }
-  //
-  //   const myClass = new MyClass();
-  //   myClass.myMethod(); // The class is invoking the function, so 'this' points to the class.
+    class MyClass {
+      // name: string = 'Peter';
+      constructor(public name: string) {
+      }
+      myMethod() {
+        console.log('Class, "this" points at :::', this);
+        console.log(this.name);
+      }
 
+      timer(){
+        setTimeout( ()=>{
+          console.log(this.name);
+        },2000)
+      }
+    }
+
+    const myClass = new MyClass('Peter');
+    const myClass2 = new MyClass('Helma');
+    myClass.myMethod(); // The class is invoking the function, so 'this' points to the class.
+    myClass2.myMethod(); // The class is invoking the function, so 'this' points to the class.
+    myClass.timer();
+    myClass2.timer();
   // 4. Element in page, a clickable <a href>
   // const elem = document.querySelector('.click');
 

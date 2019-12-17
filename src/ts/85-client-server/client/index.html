@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eenvoudige TypeScript e-commerce application</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="text-center">Eenvoudige TypeScript e-commerce</h1>
+		</div>
+	</div>
+	<div class="row">
+		<!--Kolom met collectie-->
+		<div class="col-md-8">
+			<table class="table table-striped table-bordered">
+				<!--Hier komt tabel met producten-->
+				<tbody id="products"></tbody>
+			</table>
+			<div id="bookDetails" class="panel panel-primary">
+				<!--Hier worden details per product getoond-->
+			</div>
+		</div>
+		<!--Kolom met shopping cart -->
+		<div class="col-md-4">
+			<div id="cart">
+				<h1>Winkelwagentje <i class="fa fa-shopping-cart"></i></h1>
+				<table class="table table-striped table-bordered">
+					<tbody id="tableCart"></tbody>
+				</table>
+				<h3 class="text-right">Totaal:&euro; <span id="total"></span></h3>
+				<button id="orderCart" class="btn btn-success">Bestellen</button>
+				<button id="emptyCart" class="btn btn-success">Leegmaken</button>
+				<div id="placeOrder">
+					<!--Hier worden details per bestelling getoond-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>

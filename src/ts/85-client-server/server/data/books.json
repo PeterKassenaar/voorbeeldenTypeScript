@@ -1,0 +1,47 @@
+[
+  {
+	"id"         : 1,
+	"titel"      : "Web Development Library - AngularJS",
+	"auteur"     : "Peter Kassenaar",
+	"ISBN"       : "9789059407879",
+	"prijs"      : 26.99,
+	"url"        : "http://www.vanduurenmedia.nl/EAN/9789059407879",
+	"description": "AngularJS is een van de populairste JavaScript-frameworks om webapplicaties te maken. De apps die u met AngularJS maakt draaien volledig in de browser. Maar Angular kent een tamelijk steile leercurve. In dit deel van de Web Development Library leert u hoe u AngularJS inzet om dynamische webapplicaties te schrijven"
+  },
+  {
+	"id"         : 2,
+	"titel"      : "Focus op Fotografie: Dronefotografie",
+	"auteur"     : "Wiebe de Jager",
+	"ISBN"       : "9789059408357",
+	"prijs"      : 24.95,
+	"url"        : "http://www.vanduurenmedia.nl/EAN/9789059408357",
+	"description": "Iedereen droomt er wel eens van: kunnen vliegen als een vogel en even niet gebonden zijn aan de zwaartekracht. Om nét even over de rand van die klif te kunnen kijken."
+  },
+  {
+	"id"         : 3,
+	"titel"      : "App Development Library - Programmeren met Swift",
+	"auteur"     : "Roelf Sluman",
+	"ISBN"       : "9789059408104",
+	"prijs"      : 29.95,
+	"url"        : "http://www.vanduurenmedia.nl/EAN/9789059408104",
+	"description": "Swift is de spiksplinternieuwe programmeertaal van Apple waarmee je professionele apps voor iOS en OS X ontwikkelt. De taal is volledig objectgeoriënteerd, modulair opgebouwd, modern en zeer krachtig"
+  },
+  {
+	"id"         : 4,
+	"titel"      : "Ontdek Windows 10",
+	"auteur"     : "Erwin Olij",
+	"ISBN"       : "9789059408272",
+	"prijs"      : 22.50,
+	"url"        : "http://www.vanduurenmedia.nl/EAN/9789059408272",
+	"description": "Windows 10 is flink op de schop gegaan. Veel nieuwe functies! Het in ere herstelde menu Start vervangt het startscherm van Windows 8. Het menu Start is de opgefriste en verbeterde entreehal van Windows"
+  },
+  {
+	"id"         : 5,
+	"titel"      : "Web Development Library - EcmaScript 6 en TypeScript",
+	"auteur"     : "Peter Kassenaar",
+	"ISBN"       : "9789059409323",
+	"prijs"      : 29.99,
+	"url"        : "http://www.vanduurenmedia.nl/EAN/9789059409323",
+	"description": "Meer over EcmaScript en TypeScript.."
+  }
+]

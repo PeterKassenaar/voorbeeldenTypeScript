@@ -1,0 +1,23 @@
+{
+  "name"           : "0705-typescript-client-server",
+  "description"    : "Eenvoudige e-commerce applicatie met NodeJS-TypeScript webserver, behorende bij 'Web Development Library - ECMAScript 6 en TypeScript', ISBN 9789059409323 ",
+  "version"        : "1.0.0",
+  "author"         : "Peter Kassenaar",
+  "license"        : "ICS",
+  "scripts"        : {
+	"tsc"  : "tsc",
+	"watch": "tsc -w",
+	"build": "webpack-dev-server --open"
+  },
+  "dependencies"   : {
+	"bootstrap"   : "^3.3.7",
+	"font-awesome": "^4.7.0",
+	"jquery"      : "^3.1.1",
+	"typescript"  : "^2.1.5",
+	"webpack"     : "^2.2.1"
+  },
+  "devDependencies": {
+	"ts-loader"         : "^2.0.0",
+	"webpack-dev-server": "^2.4.1"
+  }
+}
