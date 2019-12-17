@@ -1,7 +1,7 @@
 // generics-classes.ts - comment in/out the sections in this file
 namespace generics_class_example {
   //************************************************** */
-  // 0. Set up soime interfaces and some data.
+  // 0. Set up some classes and some data.
   class Employee {
     constructor(public name: string, public age: number) {}
   }
@@ -38,7 +38,7 @@ namespace generics_class_example {
   //   console.log('Name of the person: ', person.name);
   //   return person;
   // }
-
+  //
   // let foo = echoEmployees(admin); // type of foo is now of type Admin, including type safety inside generic function.
   // let bar = echoEmployees(manager); // type of bar is Manager, including type safety
   // console.log(foo, bar);

@@ -4,3 +4,5 @@ src/**/*.map
 node_modules
 jspm_packages
 .idea
+#DO include the webpack.config.js file
+!webpack.config.js
