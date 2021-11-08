@@ -11,6 +11,6 @@ class HelloWorld {
 }
 
 window.onload=function() {
-	const hello = new HelloWorld('Hello World');
+	const hello = new HelloWorld('Hello World - this is my first TypeScript project');
 	console.log(hello.sayHello());
 };
