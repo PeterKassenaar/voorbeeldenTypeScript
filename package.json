@@ -1,11 +1,10 @@
 {
  "name": "voorbeelden-typescript",
  "version": "1.0.0",
- "description": "codevoorbeelden bij de training TypeScript",
+ "description": "Coding examples on the training TypeScript",
  "author": "Peter Kassenaar <info@kassenaar.com> (Credits: @DanWahlin)",
  "scripts": {
-  "first-project": "tsc src/ts/03-helloWorld.ts --watch --outDir src/js",
-  "tsc": "tsc --project src --watch --sourceMap --outDir src/js",
+  "tsc": "tsc --project src --watch --sourceMap --outDir src/js ",
   "start": "live-server --open=src"
  },
  "dependencies": {

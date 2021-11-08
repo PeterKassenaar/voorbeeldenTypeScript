@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 // Models
 import {Book} from './model/book.model';
 import {Order} from "./model/order.model";
-import {ProductHelpers} from "./productHelpers";
+import {ProductHelpers} from "./ProductHelpers";
 
 export class BookShop {
 	// variabelen
