@@ -1,35 +1,53 @@
+// our interface (i.e 'code contract')
 interface IPerson {
-	firstName: string;
-	lastName: string;
-	email:string;
-	age?: number
+    firstName: string;
+    lastName: string;
+    email: string;
+    age?: number
 }
 
-class InterfacePerson implements IPerson {
+// function to print the persons name
+const printPerson = (person: IPerson): void => {
+    const fullName = person.firstName + ' ' + person.lastName;
+    console.log('Hello ' + fullName);
+}
+///......instantiate person, call printPerson();
 
-	constructor(public firstName:string,
-				public lastName:string,
-				public email:string) {
-	}
 
-	// OF : implementeer de interface als een options-object in de constructor
-	//firstName:string;
-	//lastName:string;
-	//email:string;
-	//age:number;
-	//
-	//constructor(personOptions:IPerson) {
-	//	this.firstName = personOptions.firstName;
-	//	this.lastName  = personOptions.lastName;
-	//	this.email     = personOptions.email;
-	//	this.age       = personOptions.age;
-	//}
+//************************************************
+// Class, implementing an interface
+//************************************************
+class InterfacePerson implements IPerson{
 
-	greet() {
-		return `Hello ${ this.firstName} ${this.lastName},
+    // shorthand notation
+    constructor(public firstName: string,
+                public lastName: string,
+                public email: string,
+                public age? : number) {
+    }
+
+    // OR : implementeer de interface als een options-object in de constructor
+    // firstName:string;
+    // lastName:string;
+    // email:string;
+    // age:number;
+    //
+    // constructor(personOptions:IPerson) {
+    // 	this.firstName = personOptions.firstName;
+    // 	this.lastName  = personOptions.lastName;
+    // 	this.email     = personOptions.email;
+    // 	this.age       = personOptions.age;
+    // }
+
+    greet() {
+        return `Hello ${this.firstName} ${this.lastName},
 			your email address is ${this.email}.`
-	}
+    }
 }
+
+const classPerson = new InterfacePerson('Luciano', 'Lastname', 'test@test.com');
+console.log(classPerson.firstName);
+
 
 // optie 1:
 const interfacePerson = new InterfacePerson('Peter', 'Kassenaar', 'info@kassenaar.com');
