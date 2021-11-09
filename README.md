@@ -1,2 +1,4 @@
 # voorbeeldenTypeScript
-Voorbeelden en demo's bij de training TypeScript  (Peter Kassenaar)
+Examples and demo's on the training TypeScript  (internationally acclaimed trainer Peter Kassenaar).
+
+For more information, or training at your location, please contact info@kassenaar.com
