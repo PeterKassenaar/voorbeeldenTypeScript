@@ -1,16 +1,16 @@
 class HelloWorld {
-	msg:string;
+    msg: string;
 
-	constructor(msg:string) {
-		this.msg = msg;
-	}
+    constructor(msg: string) {
+        this.msg = msg;
+    }
 
-	sayHello() {
-	return this.msg;
+    sayHello(): string {
+        return this.msg;
+    }
 }
-}
 
-window.onload=function() {
-	const hello = new HelloWorld('Hello World - this is my first TypeScript project');
-	console.log(hello.sayHello());
+window.onload = function () {
+    const hello = new HelloWorld('Hello World - this is my first TypeScript project');
+    console.log(hello.sayHello());
 };
