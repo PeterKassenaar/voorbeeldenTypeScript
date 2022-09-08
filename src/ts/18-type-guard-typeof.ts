@@ -13,27 +13,30 @@ namespace typeguards {
     return bar.toFixed(2);
   }
 
+  console.log(foo('Hello World'));
+
   //************************************************** */
   // 2. More real life example, get the age from an employee, which can be
   // passed in as a string or a number.
   //   class Employee {
   //     constructor(public name: string, public age: string | number) {}
   //   }
-
+  //
   //   function getEmployeeAge(employee: Employee) {
-  //     // HERE, we implement the Type Guard
+  //     // HERE, we implement the Type Guard (see example 3. next up)
   //   }
-
+  //
   //   const employeeAgeFromString = getEmployeeAge(new Employee('Dirk', '29'));
-
+  //
   //   console.log(employeeAgeFromString);
 
   //************************************************** */
   // 3. Implement the Type Guard in the function
+  //************************************************** */
   // class Employee {
   //   constructor(public name: string, public age: string | number) {}
   // }
-
+  //
   // function getEmployeeAge(employee: Employee): number {
   //   // HERE, we implement the Type Guard
   //   if (typeof employee.age === 'number') {
@@ -41,9 +44,9 @@ namespace typeguards {
   //   }
   //   return parseInt(employee.age); // convert to number, then return
   // }
-
-  // const employeeAgeAsNumber = getEmployeeAge(new Employee('Dirk', '29'));
-
+  //
+  // const employeeAgeAsNumber = getEmployeeAge(new Employee('Dirk', '30'));
+  //
   // console.log(employeeAgeAsNumber);
   // console.log('type of employeeAgeAsNumber:', typeof employeeAgeAsNumber);
 } // end namespace

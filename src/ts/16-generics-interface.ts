@@ -19,7 +19,7 @@ namespace generics_interface_example {
 
   //************************************************** */
   // 1. No type information. This works, but
-  // gives you no type safety.
+  // gives you no type safety or information.
   //************************************************** */
   function echoEmployees(person) {
     return person;
@@ -40,10 +40,12 @@ namespace generics_interface_example {
 
   //************************************************** */
   // 3. With Generic and Type Constraint: we have
-  // type safety *inside* the function
+  // type safety *inside* the function.
+  // Because <T> *extends* type Employee, inside the
+  // function we get intellisense on properties like name and age.
   //************************************************** */
   // function echoEmployees<T extends Employee>(person: T): T {
-  //   // console.log('Name of the employee: ', person.);
+  //   console.log('Name of the employee: ', person.....);
   //   return person;
   // }
   //

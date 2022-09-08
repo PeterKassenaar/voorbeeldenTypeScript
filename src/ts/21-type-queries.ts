@@ -21,7 +21,7 @@ namespace type_queries {
 	// to the Person type.
 	type Person = typeof employee;
 
-	let person: Person = {
+	let person: Person= {
 		name: 'Brandon',
 		age: 9
 	};
@@ -36,9 +36,9 @@ namespace type_queries {
 	// 3. get the keys, and therefore creating a UNION TYPE of the
 	// keys in the Person type (which in turn are inherited from the employee anonymous object)
 
-	//type PersonKeys = keyof Person; // PersonKeys is now a union type "name"| "age"
+	type PersonKeys = keyof Person; // PersonKeys is now a union type "name"| "age"
 
-	// type PersonTypes = Person[PersonKeys]; // b/c we want to access the exact types of the 'name' and 'age' properties
+	type PersonTypes = Person[PersonKeys]; // b/c we want to access the exact types of the 'name' and 'age' properties
 
 	/*********************************** */
 	// Demonstrate the power of generic types.
@@ -49,16 +49,18 @@ namespace type_queries {
 	//    ask for a property of an object
 
 	// 4a. Old-skool ES5-function. This works, but in a type unsafe way.
-	// function getProperty(obj: object, key: string) {
+	// function getPropertyValue(obj: object, key: string) {
 	// 	return obj[key];
 	// }
+	//
+	// console.log(getPropertyValue(employee, 'age')); // 27
 
 	// 4b. TypeScript way, K is a *subtype* of T. It HAS to have the members of type T.
-	// function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+	// function getPropertyValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 	// 	return obj[key];
 	// }
-
-	// const personName = getProperty(person, 'name'); // 'name' HAS to exsist in the other object, to work
+	//
+	// const personName = getPropertyValue(person, 'name'); // 'name' HAS to exsist in the other object, to work. Most editors also give intellisense on the valid keys!
 	// console.log(personName); // 'Brandon'
 
 	/*********************************** */
@@ -67,28 +69,28 @@ namespace type_queries {
 	/*********************************** */
 
 	// 5a. Data
-	// const personsArray: typeof person[] = [
-	// 	{ name: 'Eddard', age: 45 },
-	// 	{ name: 'Sansa', age: 11 },
-	// 	{ name: 'Arya', age: 9 },
-	// 	{ name: 'Robb', age: 15 },
-	// 	{ name: 'Rickon', age: 4 },
-	// 	{ name: 'Catelyn', age: 36 }
-	// ];
+	const personsArray: typeof person[] = [
+		{ name: 'Eddard', age: 45 },
+		{ name: 'Sansa', age: 11 },
+		{ name: 'Arya', age: 9 },
+		{ name: 'Robb', age: 15 },
+		{ name: 'Rickon', age: 4 },
+		{ name: 'Catelyn', age: 36 }
+	];
 
-	// // 5b. The orderBy helperfunction, using the Index Access Type notation.
-	// function orderBy<T, K extends keyof T>(objArray: T[], prop: K): T[] {
-	// 	return objArray.sort((obj1: T, obj2: T) => {
-	// 		if (obj1[prop] > obj2[prop]) {
-	// 			return 1;
-	// 		} else if (obj1[prop] < obj2[prop]) {
-	// 			return -1;
-	// 		}
-	// 		return 0;
-	// 	});
-	// }
+	// 5b. The orderBy helperfunction, using the Index Access Type notation.
+	function orderBy<T, K extends keyof T>(objArray: T[], prop: K): T[] {
+		return objArray.sort((obj1: T, obj2: T) => {
+			if (obj1[prop] > obj2[prop]) {
+				return 1;
+			} else if (obj1[prop] < obj2[prop]) {
+				return -1;
+			}
+			return 0;
+		});
+	}
 
-	// // 5c. Implementation
-	// const sortedPersons = orderBy(personsArray, 'name');
-	// console.log(sortedPersons);
+	// 5c. Implementation
+	const sortedPersons = orderBy(personsArray, 'name');
+	console.log(sortedPersons);
 } // end namespace

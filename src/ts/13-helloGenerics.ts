@@ -2,7 +2,8 @@
 var numbers: number[] = [];
 var names: string[] = [];
 
-//Generics way
+// non-Generics way: you find yourself duplicating
+// code when defining new arrays.
 var numbers = new Array<number>();
 numbers.push(1);
 numbers.push(2);
