@@ -1,4 +1,8 @@
 namespace mapped_types_record {
+
+    //***************************
+    // 7. Record<Keys, Type> Mapped Type
+    //**************************
     // Base type. Every employee has a name and an age.
     type Employee = {
         name: string;
