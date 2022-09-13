@@ -37,9 +37,9 @@ namespace conditional_types{
 
     // The actual Variable busEngine, of type BusEngine
     // Make sure you understand WHY "unleaded" is an invalid type for busEngine
-    const busEngine: BusEngine = {
-        type: "unleaded" // INVALID!
-    };
+    // const busEngine: BusEngine = {
+    //     type: "unleaded" // INVALID!
+    // };
 
     // CORRECT, as a Car engine accepts hybrid (see line 13)
     const carEngine: Engine<Car> = {
@@ -47,9 +47,9 @@ namespace conditional_types{
     };
 
     // INVALID, as "bio" is not a valid Gasoline type
-    const invalidEngine: Engine<Car> = {
-        type: "bio"
-    };
+    // const invalidEngine: Engine<Car> = {
+    //     type: "bio"
+    // };
 
     // This is where the "never" value comes in.
     type Bicycle = {
@@ -62,7 +62,7 @@ namespace conditional_types{
 
     // Hence, this is Invalid.
     // Only 'never' can be assigned to type 'never'
-    const noEngine: NoEngine = { type: "limbs" };
+    // const noEngine: NoEngine = { type: "limbs" };
 
 
     //***************************
