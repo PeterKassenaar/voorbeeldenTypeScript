@@ -15,7 +15,7 @@ function App() {
         </p>
       <h2>Welcome Peter</h2>
         <p>Today is { new Date().toDateString()}</p>
-          <BrandButton>Click Button</BrandButton>
+          <BrandButton color={'secondary'}>Click Button</BrandButton>
       </header>
     </div>
   );

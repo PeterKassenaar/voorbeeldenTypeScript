@@ -2,10 +2,10 @@ import React from 'react';
 import {Button, ButtonProps} from "@mui/material";
 // 0. If we want to type the attributes for our button,
 // it is very common to use types like these:
-// type Props={
-//     msg: string,
-//     color: 'primary' | 'secondary' | 'success'
-// }
+type Props={
+    color: 'primary' | 'secondary' | 'success',
+    children: React.ReactNode // text inside <BrandButton>...</BrandButton>
+}
 
 // 1. But, in this case (a MUI Button) we have a type ButtonProps. This
 // is the one we're using. But for some reason we DON'T want
@@ -15,7 +15,7 @@ import {Button, ButtonProps} from "@mui/material";
 // 2. So we define our own type, using the Omit<> utility function in this case
 // See https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys for details.
 // Now we *can not* use or change the 'variant' in our definition.
-type Props = Omit<ButtonProps, 'variant'>
+// type Props = Omit<ButtonProps, 'variant'>
 
 // 3. Examples of other utility types in this case.
 // If we ONLY want to be able to change the children AND variant, use Pick<>.
@@ -27,10 +27,14 @@ type Props = Omit<ButtonProps, 'variant'>
 
 // 5. More information: https://youtu.be/eJ6R1knfsoc?t=2463
 
-const BrandButton: React.FC<Props> = ({children, ...rest}) => {
+const BrandButton: React.FC<Props> = ({children, color}) => {
     return (
         <div>
-            <Button {...rest}>{children}</Button>
+            {/*Step 1: define your own props, for instance like so: */}
+            <Button color={color}>{children}</Button>
+
+            {/*Step 2: can be better, using ButtonProps (see above also):*/}
+            {/*<Button {...rest}>{msg}</Button>*/}
         </div>
     );
 };
