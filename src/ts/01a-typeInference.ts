@@ -24,7 +24,7 @@ namespace type_inference {
 
 
 // this wil NOT work, due to explicit annotation. (" error TS2322: Type 'string' is not assignable to type 'number'.)
-//var noGo : number = num2 + 'Hello World';
+//let noGo : number = num2 + 'Hello World';
 
 // defining arrays of a specific type
     let arr1: string[];
