@@ -4,11 +4,11 @@ namespace mapped_types_extract {
     // 4. Extract<Type, Union> Mapped Type
     /*************************** */
 
-        // From the docs:
-        // type T0 = Extract<"a" | "b" | "c", "a" | "b">;
-        // comment: Type T0 = "a"
+    // From the docs:
+    // type T0 = Extract<"a" | "b" | "c", "a" | "f">;
+    // comment: Type T0 = "a"
 
-        // Our example, some interfaces (or types, whatever you want):
+    // Our example, some interfaces (or types, whatever you want):
     interface Employee {
         name: string;
         age: number;
