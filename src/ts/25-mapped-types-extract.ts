@@ -22,7 +22,7 @@ namespace mapped_types_extract {
         city: string;
     }
 
-    // We NEED a type here, as an interface can't be extracted.
+    // We NEED a 'type' here, as an 'interface' can't be extracted.
     type Recipient = Extract<Employee | Department | Company, Employee>
 
     // we now KNOW Recipient is of type Employee, b/c of the extraction above.
@@ -33,6 +33,7 @@ namespace mapped_types_extract {
 
     /*************************** */
     // 5. Another example.
+    // Here with string literals instead of custom types/interfaces
     // Credits: https://www.youtube.com/watch?v=eJ6R1knfsoc&t=1034s
     /*************************** */
     type Trip = {
@@ -69,7 +70,5 @@ namespace mapped_types_extract {
             state: "Colorado"
         }
     };
-
     // optional: do a console.log() here for yourself, to check.
-
 }
