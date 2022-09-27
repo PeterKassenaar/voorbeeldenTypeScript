@@ -1,9 +1,10 @@
 import React from 'react';
 import {Button, ButtonProps} from "@mui/material";
-// 0. If we want to type the attributes for our button,
+// 0. We use TypeScript, so we want to be Type Safe!
+// If we want to type the attributes for our button,
 // it is very common to use types like these:
 type Props={
-    color: 'primary' | 'secondary' | 'success',
+    // color: 'primary' | 'secondary' | 'success',
     children: React.ReactNode // text inside <BrandButton>...</BrandButton>
 }
 
@@ -27,11 +28,11 @@ type Props={
 
 // 5. More information: https://youtu.be/eJ6R1knfsoc?t=2463
 
-const BrandButton: React.FC<Props> = ({children, color}) => {
+const BrandButton: React.FC<Props> = ({children}) => {
     return (
         <div>
             {/*Step 1: define your own props, for instance like so: */}
-            <Button color={color}>{children}</Button>
+            <Button>{children}</Button>
 
             {/*Step 2: can be better, using ButtonProps (see above also):*/}
             {/*<Button {...rest}>{msg}</Button>*/}
